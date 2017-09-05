@@ -35,7 +35,7 @@ namespace CsString {
 template <typename E, typename A = std::allocator<typename E::storage_unit>>
 class CsBasicString;
 
-class CsChar
+class LIB_CS_STRING_EXPORT CsChar
 {
    public:
       CsChar()
