@@ -315,7 +315,7 @@ class CsBasicString
       // for a const char * and char *
       template <typename T,  typename  = typename std::enable_if<std::is_same<T, const char *>::value ||
                   std::is_same<T, char *>::value>::type>
-      size_type find_first_not_of(const T &strc, size_type indexStart = 0) const;
+      size_type find_first_not_of(const T &str, size_type indexStart = 0) const;
 
       // for an array of chars
       template <int N>
@@ -1228,7 +1228,7 @@ typename CsBasicString<E, A>::size_type CsBasicString<E, A>::find(const char (&s
          return -1;
       } else {
          return indexStart;
-      }
+      } 
    }
 
    if (indexStart >= stringLen) {
@@ -1280,7 +1280,7 @@ typename CsBasicString<E, A>::size_type CsBasicString<E, A>::find(const CsBasicS
          return -1;
       } else {
          return indexStart;
-      }
+      } 
    }
 
    if (indexStart >= stringLen) {
@@ -1932,7 +1932,7 @@ typename CsBasicString<E, A>::size_type CsBasicString<E, A>::find_first_not_of(c
          return -1;
       } else {
          return indexStart;
-      }
+      } 
    }
 
    if (indexStart >= stringLen) {
@@ -2241,7 +2241,7 @@ typename CsBasicString<E, A>::size_type CsBasicString<E, A>::find_last_not_of(co
          return stringLen - 1;
       } else {
          return indexStart;
-      }
+      } 
    }
 
    size_type retval;

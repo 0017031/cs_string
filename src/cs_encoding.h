@@ -14,7 +14,7 @@
 #ifndef LIB_CS_ENCODING_H
 #define LIB_CS_ENCODING_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <vector>
 
 #include <cs_char.h>

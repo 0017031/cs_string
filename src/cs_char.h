@@ -14,7 +14,7 @@
 #ifndef LIB_CS_CHAR_H
 #define LIB_CS_CHAR_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <memory>
 
 namespace CsString {
@@ -38,11 +38,7 @@ class CsBasicString;
 class LIB_CS_STRING_EXPORT CsChar
 {
    public:
-      CsChar()
-         : m_char(0)
-      {
-
-      }
+      CsChar() = default;
 
       template <typename T = int>
       CsChar(char c)
@@ -77,7 +73,7 @@ class LIB_CS_STRING_EXPORT CsChar
       uint32_t unicode() const;
 
    private:
-      uint32_t m_char;
+      uint32_t m_char{0};
 };
 
 // comparisons
